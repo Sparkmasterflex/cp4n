@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flex-config xmlns="http://www.adobe.com/2006/flex-config">
+<compiler>
+<source-path append="true">
+<path-element>C:\eclipse_projects\neb_sidebar\src</path-element>
+</source-path>
+</compiler>
+<file-specs>
+<path-element>C:\eclipse_projects\neb_sidebar\src\neb_sidebar.as</path-element>
+</file-specs>
+<target-player>9</target-player>
+<output>C:\eclipse_projects\neb_sidebar\bin\neb_sidebar.swf</output>
+<default-background-color>#FFFFFF</default-background-color>
+<default-frame-rate>30</default-frame-rate>
+<default-size>
+<width>295</width>
+<height>505</height>
+</default-size>
+</flex-config>

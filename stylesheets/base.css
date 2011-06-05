@@ -1,0 +1,415 @@
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+.hidden {
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.floatleft { float: left; }
+.floatright { float: right; }
+
+.blackGradient {
+  background: #888888;
+  background: -o-linear-gradient(top, #888888 0%, #444 50%, #222222 51%, #000000 100%);
+  background: -moz-linear-gradient(top, #888888 0%, #444 50%, #222222 51%, #000000 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#888888), color-stop(50%,#444), color-stop(51%,#222222), color-stop(100%,#000000));
+}
+
+.redGradient {
+  background: #C1122F;
+  background: -o-linear-gradient(top, #C1122F 1%, #93111E 50%, #821617 51%, #840D0F 100%);
+  background: -moz-linear-gradient(top, #C1122F 1%, #93111E 50%, #821617 51%, #840D0F 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#C1122F), color-stop(50%,#93111E), color-stop(51%,#821617), color-stop(100%,#840D0F));
+}
+
+.sunkenBox {
+  box-shadow: -1px -1px -1px #444;
+  -webkit-box-shadow: -1px -1px -1px #444;
+}
+
+
+/*------------------------ Body ---*/
+body {
+  background: #fff;
+  background: -o-linear-gradient(top, #CCCCCC 22%, #E0E0E0 45%, #FFFFFF 100%);
+  background: -moz-linear-gradient(top, #CCCCCC 22%, #E0E0E0 45%, #FFFFFF 100%);
+  background: -webkit-gradient(linear, 0% 22%, 0% 100%, from(#CCCCCC), to(#FFFFFF), color-stop(.5,#E0E0E0));
+  color: #fff;
+  font-size: 62.5%;
+  font-family: Arial, Tahoma, san-serif;
+}
+
+#body_bg { background: url(images/bg_pattern.png) repeat top left;}
+
+p {
+  font-size: 1.8em;
+  line-height: 1.5em;
+  margin-bottom: 0.56em;
+}
+time {
+	display: block;
+	font-size: 1.6em;
+	color: #c1122f;
+	margin-bottom: 0.63em;
+}
+
+a { text-decoration: none; color: #d7d7d7; }
+  a:hover { text-decoration: underline; color: #c1122f; }
+
+#container {
+  width: 102.4em;
+  margin: 0 auto;
+  background: #444444;
+  background: -o-linear-gradient(top, #444444 0%, #222222 64%, #000000 100%);
+  background: -moz-linear-gradient(top, #444444 0%, #222222 64%, #000000 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#444444), color-stop(64%,#222222), color-stop(100%,#000000));
+}
+
+/*------------------------------Header----------*/
+#header {
+  height: 18.3em;
+  padding: 0.25em 2em;
+  width: 98.4em;
+  position: relative;
+}
+
+#headerBar {
+  height: 9em;
+  padding: 1.5em;
+  position: absolute;
+  top: 2.5em;
+  left: 0;
+  width: 99.4em;
+}
+
+#logo {
+  padding: 0.5em 0;
+  width: 44em;
+  position: relative;
+  z-index: 300;
+}
+  #logo h1 {
+    padding: 2.6em 1em 0 0;
+  }
+    #logo h1 a {
+      background: url(images/cp4n_logo.png) no-repeat top left;
+      display: block;
+      width: 24.1em;
+      height: 10.1em;
+    }
+  #logo h2 a {
+    display:block;
+    float: left;
+    height: 16.2em;
+    width: 18.5em;
+    background: url(images/iron_n.png) no-repeat top left;
+  }
+
+/*-----Navigation -----*/
+ul#topNav {
+  position: absolute;
+  top: 0.5em;
+  right:1em;
+  width: 20.4em;
+}
+  ul#topNav li { float: left; }
+    ul#topNav li.center { border-left: 1px solid #d7d7d7; border-right: 1px solid #d7d7d7; }
+    ul#topNav li a {
+      text-shadow: 1px 1px 1px #000;
+      font-size: 1.6em;
+      padding: 0 0.63em;
+    }
+ul#mainNav {
+  top: 15.5em;
+  right: 1em;
+  width: 63.5em;
+  z-index: 350;
+  position: absolute;
+}
+  ul#mainNav li {
+    float: left;
+    border-right: 1px solid #fff;
+  }
+    ul#mainNav li.last { border: none; }
+    ul#mainNav li a {
+      text-transform: uppercase;
+      font-size: 2em;
+      font-family: 'ImpactRegular';
+      padding: 0.1em 1em 0.5em;
+      text-shadow: 1px 1px 1px #000;
+      letter-spacing: 2px;
+      
+    }
+      ul#mainNav li.last a { padding-right: 0; }
+        ul#mainNav li.about:hover { padding-bottom: 0.5em; }
+        ul#mainNav li.about:hover ul.subNav { display: block; }
+      ul#mainNav li ul.subNav {
+        position: absolute;
+        top: 2.5em;
+        left: 21.5em;
+        z-index: 400;
+        width: 15em;
+        padding: 1em 2em;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        box-shadow: 1px 1px 1px #777;
+        display: none;
+      }
+      ul#mainNav li ul.subNav li { 
+        margin: 0.5em 0;
+        border: none;
+      }
+        ul#mainNav li ul.subNav li a { padding: 0; }
+          ul#mainNav li ul.subNav li a:hover { color: #fff; }
+
+/*---- nextEvent ----*/
+#nextEvent {
+  margin-top: 0.47em;
+  float: right;
+  width: 43em;
+  height: 6.2em;
+  padding: 1em;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+  #nextEvent h4 {
+    float: left;
+    width: 11.46em;
+    font-size: 2.4em;
+  }
+    #nextEvent a.floatright {
+      width: 7.5em;
+      text-align: right;
+      margin-top: 0.3em;
+      text-decoration: underline;
+      color: #fff;
+      font-size: 1.4em;
+    }
+      #nextEvent a.floatright:hover { color: #c1122f; }
+
+  #nextEvent .sunkenBox {
+    width: 41em;
+    margin-top: 0.5em;
+    float: left;
+    background: #fff;
+    padding: 1em;
+    height: 1.4em;
+    border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+  }
+
+  #nextEvent .sunkenBox p { color: #000; font-size: 1.6em; }
+
+/*------------------------------Content----------*/
+#content { padding: 1em 2em 4em; }
+  #content .leftcol { width: 61.5em; float: left; }
+  #content .rightcol { width: 33.3em; float: right; }
+
+  .leftcol h2 {
+    width: 62.7em;
+    height: 5.1em;
+    margin-bottom: 1em;
+  }
+    h2.bigRed { background: url(images/bigRed.png) no-repeat top left; }
+    h2.membership { background: url(images/member.png) no-repeat top left; }
+    h2.aboutUs { background: url(images/about.png) no-repeat top left; }
+    h2.calendar { background: url(images/calendar.png) no-repeat top left; }
+    h2.chapterNews { background: url(images/chapterNews.png) no-repeat top left; }
+    h2.getInvolved { background: url(images/getInvolved.png) no-repeat top left; }
+    h2.photos { background: url(images/photos.png) no-repeat top left; }
+    h2.scholarships { background: url(images/scholarships.png) no-repeat top left; }
+    h2.watchSite { background: url(images/watchSite.png) no-repeat top left; }
+
+  /*------SlideShow------*/
+  .leftcol #slideshow {
+    margin: 0 2em;
+    position: relative;
+    min-height: 27.6em;
+    width: 58em;
+    background: #000;
+  }
+  
+  .leftcol #slideshow .caption {
+    position: absolute;
+    z-index: 100;
+    top: 21.5em;
+    width: 56em;
+    height: 2em;
+    padding: 2em 1em;
+    background: #000000;
+    background: -moz-linear-gradient(top, #000000 0%, #8c0015 29%, #000000 59%, #000000 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(29%,#8c0015), color-stop(59%,#000000), color-stop(100%,#000000));
+    opacity: .75;
+  }
+    #slideshow .caption p {
+      width: 75%;
+      float: left;
+    }
+    #slideshow .caption ul#slideLinks {
+      width: 25%;
+      float: right;
+    }
+      #slideshow .caption ul#slideLinks li {
+        float: left;
+        margin: 0 0.5em
+      }
+        #slideshow .caption ul#slideLinks li a {
+          width: 1.9em;
+          height: 1.9em;
+          display: block;
+          background: url(images/slideBtn.png) no-repeat bottom center;
+        }
+        #slideshow .caption ul#slideLinks li.current a,
+        #slideshow .caption ul#slideLinks li a:hover { background-position: top center; }
+
+/*--------Text--------*/
+.textBlock {
+  padding: 0 2em;
+  margin: 1em 0;
+}
+  .textBlock p {
+    line-height: 1.5em;
+    margin-bottom: 0.63em;
+  }
+
+/*------SideBar-------*/
+#sideBar {
+  width: 29.8em;
+  min-height: 51em;
+  background: #111;
+  border: 1px solid #bbb;
+  padding: 1em;
+}
+  #sideBar #sideBar-inner {
+    padding-left: 0.2em;
+    width:100%;
+    height: 51em;
+    background: #93111E;
+    background: -moz-linear-gradient(top, #93111E 0%, #630B14 69%, #44080C 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#93111E), color-stop(69%,#630B14), color-stop(100%,#44080C));
+  }
+
+/*------------------------------Footer----------*/
+#footer { padding: 2em; }
+  #footer a:hover { color: #fff; }
+#footer ul#footerNav { width: 41.5em; }
+  #footer ul#footerNav li {
+    float: left;
+    margin-right: 1.5em;
+    line-height: 2.7em;
+  }
+    #footer ul#footerNav li a {
+      font-size: 1.8em;
+      display: block;
+      width: 6.38em;
+      text-shadow: 1px 1px 1px #444;
+    }
+  #footer #footer-center {
+    float: left;
+    width: 21.5em;
+  }
+    #footer-center p {
+      font-size: 1.2em;
+      text-align: center;
+      margin-bottom: 0.42em;
+    }
+    #footer-center ul#social { margin-bottom: 0.5em; }
+    #footer-center ul#social li {
+      margin: 0.5em 1em;
+      float: left;
+    }
+      #footer-center ul#social li a {
+        display: block;
+        width: 3.2em;
+        height: 3.2em;
+      }
+        #footer-center ul#social li a.facebook { background: url(images/fb_icon.png) no-repeat center center; }
+        #footer-center ul#social li a.twitter { background: url(images/twitter_icon.png) no-repeat center center; }
+        #footer-center ul#social li a.digg { background: url(images/digg_icon.png) no-repeat center center; }
+        #footer-center ul#social li a.flickr { background: url(images/flickr_icon.png) no-repeat center center; }
+
+  #footer #sponsors {
+    float: right;
+    width: 34em;
+  }
+    #sponsors h4 {
+      font-size: 1.8em;
+      border-bottom: 1px solid #fff;
+    }
+    #sponsors ul li {
+      float: left;
+      margin: 0.5em 1em;
+    }
+    #sponsors ul li a {
+      display: block;
+      height: 6.9em;
+    }
+      #sponsors ul li a.alumni {
+        width: 5.5em;
+        background: url(images/neb_alumni.png) no-repeat top center;
+      }
+      #sponsors ul li a.nebU {
+        width: 7.5em;
+        background: url(images/neb_u.png) no-repeat top center;
+      }
+
+
+/*------------------------------Contact----------*/
+#contactForm {
+  color: #000;
+  width: 25em;
+  padding: 2em;
+  margin-left: 2em;
+  background: -moz-linear-gradient(top, #CCCCCC 22%, #E0E0E0 45%, #FFFFFF 100%);
+  background: -webkit-gradient(linear, 0% 22%, 0% 100%, from(#CCCCCC), to(#FFFFFF), color-stop(.5,#E0E0E0));
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: -1px -1px 2px #444;
+  -webkit-box-shadow: -1px -1px 2px #444;
+}
+ #contactForm .formfield {
+   width: 100%;
+   margin-bottom: 1em;
+ }
+    #contactForm .formfield label {
+      font-size: 1.6em;
+      padding: 0.32em 0;
+    }
+    #contactForm .formfield input {
+        color: #fff;
+        padding: 0.19em 0.13em;
+        border: none;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        background: #C1122F;
+        background: -moz-linear-gradient(top, #C1122F 1%, #93111E 50%, #821617 51%, #840D0F 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#C1122F), color-stop(50%,#93111E), color-stop(51%,#821617), color-stop(100%,#840D0F));
+      }
+      #contactForm .formfield input[type=text] { 
+        width: 15.49em;
+        font-size: 1em;
+      }
+      #contactForm .formfield input[type=submit] {
+        font-size: 1.6em;
+        padding: 0.19em 1.25em;
+        float: right;
+      }
+      #contactForm .formfield input[type=text]:focus,
+      #contactForm .formfield input[type=submit]:hover {
+        background: #888888;
+        background: -moz-linear-gradient(top, #888888 0%, #444 50%, #222222 51%, #000000 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#888888), color-stop(50%,#444), color-stop(51%,#222222), color-stop(100%,#000000));
+      }
+      
