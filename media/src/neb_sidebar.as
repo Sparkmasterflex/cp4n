@@ -1,83 +1,1 @@
-package src {
-  import flash.display.MovieClip;
-  import flash.events.*;
-  import src.components.sectionController;
-  import com.greensock.*
-  import com.greensock.easing.*
-  
-  public class neb_sidebar extends MovieClip {
-  	/*---- Classes ----*/
-  	public var section:sectionController;
-  	
-  	/*---- Array ----*/
-  	public var sections:Array = new Array();
-    public var headers:Array = new Array('COUNTDOWN', 'SCHEDULE', 'NEWS', 'MEMBERSHIP');
-    private var link1Pos:Array = new Array(20, 315, 375, 435);
-    private var link2Pos:Array = new Array(20, 80, 375, 435);
-    private var link3Pos:Array = new Array(20, 80, 140, 435);
-    private var link4Pos:Array = new Array(20, 80, 140, 200);
-    
-    /*---- MovieClips and Strings ----*/
-    public var openedLink;
-
-	public function neb_sidebar(){
-	  for(var i:uint = 0; i < headers.length; i++) {
-	    section = new sectionController(headers[i]);
-	    section.x = 10;
-        section.y = 20 + (60 * i);
-        section.name = headers[i];
-	    addChild(section);
-	    section.addEventListener(MouseEvent.CLICK, toggleSection);
-	    sections.push(section);
-	  }
-	  openFirst();
-	}
-	
-	private function openFirst() {
-	  sections[0].openSection();
-	  tweenPositions(link1Pos);
-	  openedLink = sections[0];
-	  openedLink.removeEventListener(MouseEvent.CLICK, toggleSection);
-	}
-	
-	private function toggleSection(event:MouseEvent) {
-	  var clicked = event.currentTarget,
-	      index = sections.indexOf(clicked),
-	      arr = findLinkPos(index);
-
-	  openedLink.addEventListener(MouseEvent.CLICK, toggleSection);
-	  clicked.removeEventListener(MouseEvent.CLICK, toggleSection);
-	      
-	  openedLink.closeSection();
-	  clicked.openSection();
-	  tweenPositions(arr);
-	  openedLink = clicked;
-	}
-	
-	public function tweenPositions(arr) {
-	  for(var i:uint = 0; i < sections.length; i++) {
-        TweenLite.to(sections[i], .5, {y:arr[i]});
-      }
-	}
-	
-	private function findLinkPos(i):Array {
-      var arr:Array;
-      switch(i) {
-        case 0:
-          arr = link1Pos;
-          break;
-        case 1:
-          arr = link2Pos;
-          break;
-        case 2:
-          arr = link3Pos;
-          break;
-        case 3:
-          arr = link4Pos;
-          break;
-      }
-      
-      return arr;
-    }
-  }	
-}
+﻿package src {  import flash.display.MovieClip;  import flash.events.*;  import com.greensock.*  import com.greensock.easing.*    import src.components.sectionController;  import src.rss.RSSclass;  import src.dispatch.TweenDoneEvent;    public class neb_sidebar extends MovieClip {  	/*---- Classes ----*/  	public var section:sectionController;  	public var sportsRSS:RSSclass;  	public var countdownRSS:RSSclass;  	  	/*---- Array ----*/  	public var sections:Array = new Array();    public var headers:Array = new Array('COUNTDOWN', 'SCHEDULE', 'NEWS', 'MEMBERSHIP');	public var currentLinkPos:Array;    private var link1Pos:Array = new Array(20, 315, 375, 435);    private var link2Pos:Array = new Array(20, 80, 375, 435);    private var link3Pos:Array = new Array(20, 80, 140, 435);    private var link4Pos:Array = new Array(20, 80, 140, 200);        /*---- MovieClips and Strings ----*/    public var openedLink;    public var displayed:String;	public function neb_sidebar() {	  addEventListener(TweenDoneEvent.DONE, tweenDoneHandler);	  for(var i:uint = 0; i < headers.length; i++) {	    section = new sectionController(headers[i]);	    section.x = 10;        section.y = 20 + (60 * i);        section.name = headers[i];	    addChild(section);	    section.addEventListener(MouseEvent.CLICK, toggleSection);	    sections.push(section);		createContent(section.name);	  }	  openFirst();	}		private function createContent(name) {	  switch(name) {		case headers[0]:		  countdownRSS = new RSSclass('http://www.huskers.com/rss.dbml?db_oem_id=100&media=schedulesxml', name);		  countdownRSS.name = 'countdown';		  break;		case headers[1]:		  sportsRSS = new RSSclass('http://www.huskers.com/rss.dbml?db_oem_id=100&media=schedulesxml', name);		  sportsRSS.name = 'schedule';		  break;		case headers[2]:		  break;		case headers[3]:		  		  break;	  }	}		private function openFirst() {	  sections[0].openSection();	  tweenPositions(link1Pos);	  openedLink = sections[0];	  openedLink.removeEventListener(MouseEvent.CLICK, toggleSection);	}		private function toggleSection(event:MouseEvent) {	  var clicked = event.currentTarget,	      index = sections.indexOf(clicked);	  	  setClickedAttributes(index);	  openedLink.addEventListener(MouseEvent.CLICK, toggleSection);	  clicked.removeEventListener(MouseEvent.CLICK, toggleSection);	  	  openedLink.removeChild(openedLink.getChildByName(displayed));	  openedLink.closeSection();	  clicked.openSection();	  tweenPositions(currentLinkPos);	  openedLink = clicked;	}		public function tweenPositions(arr) { for(var i:uint = 0; i < sections.length; i++) TweenLite.to(sections[i], .5, {y:arr[i]}); }		private function setClickedAttributes(i) {      switch(i) {        case 0:          currentLinkPos = link1Pos;		  displayed = 'countdown';          break;        case 1:          currentLinkPos = link2Pos;          break;        case 2:          currentLinkPos = link3Pos;          break;        case 3:          currentLinkPos = link4Pos;          break;      }    }/*--------------------------------------- DispatchedEvents ------*/	private function tweenDoneHandler(event:TweenDoneEvent) {	  var obj = event.eventTarget,		  action = event.action;	  switch(obj) {		case sections[0]:		  obj.addChild(countdownRSS);		  displayed = countdownRSS.name;		  break;		case sections[1]:		  break;		case sections[2]:		  break;		case sections[3]:		  break;	  }	}  }}

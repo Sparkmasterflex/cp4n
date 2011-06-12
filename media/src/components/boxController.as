@@ -3,6 +3,8 @@ package src.components {
   import src.common.gradient;
   import com.greensock.*
   import com.greensock.easing.*
+  
+  import src.dispatch.TweenDoneEvent;
 	
   public class boxController extends MovieClip {
 	public var box:gradient;
@@ -21,11 +23,15 @@ package src.components {
 	}
 	
 	public function open() {
-      TweenLite.to(box, .5, { height: 215 });
+      TweenLite.to(box, .5, { height: 215, onComplete: dispatchAction } );
     }
 	
 	public function close() {
 	  TweenLite.to(box, .5, { height: 3 });
+	}
+	
+	public function dispatchAction() {
+	  dispatchEvent(new TweenDoneEvent(TweenDoneEvent.DONE, this.parent, 'open'));
 	}
   }
 }
