@@ -11,7 +11,7 @@
       <li><a href="/chapternews.php">Chapter News</a></li>
       <li><a href="/calendar.php">Calendar</a></li>
       <li><a href="/watchsite.php">Watch Site</a></li>
-      <li><a href="/scholarships.php">Scholarships</a></li>
+      <li><a href="/alumni_map.php">Alumni Map</a></li>
     </ul>
   </li>
   <li><a href="/photos.php">Photos</a></li>

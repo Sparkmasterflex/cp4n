@@ -1,0 +1,83 @@
+[03-Jul-2011 00:00:59] PHP Fatal error:  Cannot redeclare class Database in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 2
+[03-Jul-2011 00:03:44] PHP Fatal error:  Cannot redeclare class Database in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 2
+[03-Jul-2011 00:03:46] PHP Fatal error:  Cannot redeclare class Database in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 2
+[03-Jul-2011 00:19:24] PHP Fatal error:  Cannot redeclare saveAddress() (previously declared in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php:5) in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 10
+[03-Jul-2011 00:19:48] PHP Notice:  Undefined index: port in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/rssreader.php on line 296
+[03-Jul-2011 00:19:48] PHP Notice:  Undefined index: user in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/rssreader.php on line 297
+[03-Jul-2011 00:19:48] PHP Notice:  Undefined index: pass in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/rssreader.php on line 298
+[03-Jul-2011 00:19:48] PHP Notice:  Undefined index: query in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/rssreader.php on line 300
+[03-Jul-2011 00:19:48] PHP Notice:  Undefined index: fragment in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/rssreader.php on line 301
+[03-Jul-2011 00:38:08] PHP Notice:  Use of undefined constant zip - assumed 'zip' in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 7
+[03-Jul-2011 00:38:08] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'America/New_York' for 'EDT/-4.0/DST' instead in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/Database.class.php on line 251
+[03-Jul-2011 00:40:34] PHP Notice:  Use of undefined constant zip - assumed 'zip' in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 7
+[03-Jul-2011 00:46:53] PHP Notice:  Use of undefined constant zip - assumed 'zip' in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 7
+[03-Jul-2011 00:49:09] PHP Fatal error:  Call to undefined function fetch_array() in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 23
+[03-Jul-2011 00:56:09] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/header.php on line 56
+[03-Jul-2011 01:04:31] PHP Notice:  Undefined variable: script in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/header.php on line 27
+[03-Jul-2011 01:04:38] PHP Notice:  Undefined variable: script in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/header.php on line 27
+[03-Jul-2011 01:11:44] PHP Notice:  Undefined variable: arr in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/header.php on line 38
+[03-Jul-2011 01:11:44] PHP Warning:  Invalid argument supplied for foreach() in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/header.php on line 38
+[03-Jul-2011 01:12:51] PHP Notice:  Undefined variable: arr in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/header.php on line 38
+[03-Jul-2011 01:12:51] PHP Warning:  Invalid argument supplied for foreach() in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/header.php on line 38
+[03-Jul-2011 01:25:33] PHP Notice:  Use of undefined constant zip - assumed 'zip' in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 7
+[03-Jul-2011 01:31:48] PHP Notice:  Use of undefined constant zip - assumed 'zip' in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 7
+[03-Jul-2011 01:31:48] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'America/New_York' for 'EDT/-4.0/DST' instead in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/Database.class.php on line 251
+[03-Jul-2011 01:33:14] PHP Notice:  Use of undefined constant zip - assumed 'zip' in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 7
+[03-Jul-2011 17:42:17] PHP Notice:  Use of undefined constant zip - assumed 'zip' in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 7
+[03-Jul-2011 17:50:08] PHP Notice:  Use of undefined constant zip - assumed 'zip' in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 7
+[03-Jul-2011 20:03:31] PHP Fatal error:  Call to undefined function getAllMarkers() in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/header.php on line 26
+[05-Jul-2011 18:18:52] PHP Fatal error:  Call to undefined function getAllMarkers() in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/header.php on line 26
+[07-Jul-2011 19:56:38] PHP Notice:  Undefined variable: zipcode in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 36
+[07-Jul-2011 19:57:55] PHP Notice:  Undefined variable: zipcode in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[07-Jul-2011 19:57:59] PHP Notice:  Undefined variable: zipcode in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[07-Jul-2011 20:00:10] PHP Fatal error:  Can't use function return value in write context in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/zipcode.php on line 87
+[07-Jul-2011 20:30:06] PHP Notice:  Undefined variable: success in /Users/raymondke99/Sites/cp4n/httpdocs/alumni_map.php on line 17
+[07-Jul-2011 20:30:06] PHP Notice:  Undefined variable: success in /Users/raymondke99/Sites/cp4n/httpdocs/alumni_map.php on line 17
+[09-Jul-2011 01:10:49] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:10:49] PHP Notice:  Undefined index: comments in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:10:49] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:10:49] PHP Notice:  Undefined index: comments in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:10:49] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:10:49] PHP Notice:  Undefined index: comments in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:10:49] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:10:49] PHP Notice:  Undefined index: comments in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:10:49] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:10:49] PHP Notice:  Undefined index: comments in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:10:49] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:10:49] PHP Notice:  Undefined index: comments in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:04] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:04] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:04] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:04] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:04] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:04] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:04] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:04] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:04] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:04] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:04] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:04] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:47] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:47] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:47] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:47] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:47] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:47] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:47] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:47] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:47] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:47] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:47] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:47] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:49] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:49] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:49] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:49] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:49] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:49] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:49] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:49] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:49] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:49] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38
+[09-Jul-2011 01:13:49] PHP Notice:  Undefined index: name in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 37
+[09-Jul-2011 01:13:49] PHP Notice:  Undefined index: description in /Users/raymondke99/Sites/cp4n/httpdocs/_includes/functions.php on line 38

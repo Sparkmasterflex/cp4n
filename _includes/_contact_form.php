@@ -1,29 +1,19 @@
 <div id="contactForm" class="clearfix">    
   <form action="_includes/form_mail.php" method="post">
-    <div class="formfield">
-      <label>First and Last Name: *
-        <input type="text" name=name required />
-      </label>
-    </div>
-    <div class="formfield">
-      <label>Email: *
-        <input type="text" name=email required />
-      </label>
-    </div>
-    <div class="formfield">
-      <label>Phone Number:
-        <input type="text" name=phone />
-      </label>
-    </div>
-    <div class="formfield">
-      <label>Location:
-        <input type="text" name=location />
-      </label>
-      <sub>Example: Mechanicsburg</sub>        
-    </div>
+    <label>First and Last Name: *<br />
+      <input type="text" name=name required />
+    </label>
+    <label>Email: *<br />
+      <input type="text" name=email required />
+    </label>
+    <label>Phone Number: <br />
+      <input type="text" name=phone />
+    </label>
+    <label>Location:
+      <input type="text" name=location />
+      <sub>Example: Mechanicsburg</sub>
+    </label>
     <sub>* indicates a required field</sub>
-    <div class="formfield">
-      <input type="submit" name=Submit />
-    </div>
+    <input type="submit" name=Submit />
   </form>
 </div>

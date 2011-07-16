@@ -135,7 +135,7 @@ ul#mainNav {
   top: 15.5em;
   right: 1em;
   width: 63.5em;
-  z-index: 350;
+  z-index: 300;
   position: absolute;
 }
   ul#mainNav li {
@@ -249,6 +249,7 @@ ul#mainNav {
     height: 2em;
     padding: 2em 1em;
     background: #000000;
+    background: -o-linear-gradient(top, #000000 0%, #8c0015 29%, #000000 59%, #000000 100%);
     background: -moz-linear-gradient(top, #000000 0%, #8c0015 29%, #000000 59%, #000000 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(29%,#8c0015), color-stop(59%,#000000), color-stop(100%,#000000));
     opacity: .75;
@@ -285,6 +286,11 @@ ul#mainNav {
   }
 
 /*------SideBar-------*/
+#content .rightcol.events {
+	width: 25.8em;
+	padding-top: 6.1em;
+}
+
 #sideBar {
   width: 29.8em;
   min-height: 51em;
@@ -297,6 +303,7 @@ ul#mainNav {
     width:100%;
     height: 51em;
     background: #93111E;
+    background: -o-linear-gradient(top, #93111E 0%, #630B14 69%, #44080C 100%);
     background: -moz-linear-gradient(top, #93111E 0%, #630B14 69%, #44080C 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#93111E), color-stop(69%,#630B14), color-stop(100%,#44080C));
   }
@@ -365,6 +372,36 @@ ul#mainNav {
         background: url(images/neb_u.png) no-repeat top center;
       }
 
+/*------------------------------Alumni Map----------*/
+#map_canvas {
+	width: 60em;
+	height: 40em;
+}
+
+#alumni_map .rightcol { padding-top: 1.75em; }
+	#alumni_map .rightcol h3 { font-size: 2.1em; margin-bottom: 0.48em; text-align: center;}
+/*------------------------------Photo Page----------*/
+body#photos #content .leftcol { min-height: 41em; }
+ul#thumbs { width: 100%; }
+	ul#thumbs li {
+		float: left;
+		padding: 0.31em;
+		margin: 0.63em;
+		background: #93111E;
+    background: -o-linear-gradient(top, #93111E 0%, #630B14 69%, #44080C 100%);
+    background: -moz-linear-gradient(top, #93111E 0%, #630B14 69%, #44080C 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#93111E), color-stop(69%,#630B14), color-stop(100%,#44080C));
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+	}
+		ul#thumbs li:hover {
+			background: #ccc;
+			box-shadow: none;
+			-moz-box-shadow: none;
+			-webkit-box-shadow: none;
+		}
+
 
 /*------------------------------Contact----------*/
 #contactForm {
@@ -372,44 +409,75 @@ ul#mainNav {
   width: 25em;
   padding: 2em;
   margin-left: 2em;
+  background: -o-linear-gradient(top, #CCCCCC 22%, #E0E0E0 45%, #FFFFFF 100%);
   background: -moz-linear-gradient(top, #CCCCCC 22%, #E0E0E0 45%, #FFFFFF 100%);
   background: -webkit-gradient(linear, 0% 22%, 0% 100%, from(#CCCCCC), to(#FFFFFF), color-stop(.5,#E0E0E0));
+  border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   box-shadow: -1px -1px 2px #444;
+  -moz-box-shadow: -1px -1px 2px #444;
   -webkit-box-shadow: -1px -1px 2px #444;
 }
- #contactForm .formfield {
-   width: 100%;
-   margin-bottom: 1em;
- }
-    #contactForm .formfield label {
-      font-size: 1.6em;
-      padding: 0.32em 0;
+#alumni_map #contactForm { padding-bottom: 4em; }
+	#alumni_map #contactForm sub { margin-bottom: 1em; }
+	form label {
+		font-size: 1.6em;
+	  display: block;
+	  width: 100%;
+	  margin-bottom: 0.63em;
+    padding: 0.32em 0;
+    position: relative;
+	}
+		form label p {
+			font-size: 0.75em;
+			position: absolute;
+			z-index: 100;
+			top: -2px;
+			right: 0;
+		}
+		form label input + p.val { display: none; }
+			form label input + p.val.error { display: block; }
+				form label input + p.val.error span { display: block; }
+			form label input + p.val span.invalid {
+				padding: 0.17em 0.25em;
+				background: rgba(193, 18, 47, 0.6);
+				border: 1px solid #821617;
+				border-radius: 3px;
+			}
+			
+			form label input:valid {
+				background: #C1122F url(images/accept.png) no-repeat right center;
+	      background: url(images/accept.png) no-repeat right center, -o-linear-gradient(top, #C1122F 1%, #93111E 50%, #821617 51%, #840D0F 100%);
+	      background: url(images/accept.png) no-repeat right center, -moz-linear-gradient(top, #C1122F 1%, #93111E 50%, #821617 51%, #840D0F 100%);
+	      background: url(images/accept.png) no-repeat right center, -webkit-gradient(linear, left top, left bottom, color-stop(1%,#C1122F), color-stop(50%,#93111E), color-stop(51%,#821617), color-stop(100%,#840D0F));
+	    }
+			form label input:focus + p.val { display: block; }
+			form label input:focus:required:valid + p.val span.invalid { display: none; }
+    form input,
+    form textarea {
+      color: #fff;
+      padding: 0.19em 0.13em;
+      border: none;
+      border-radius: 3px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      background: #C1122F;
+      background: -o-linear-gradient(top, #C1122F 1%, #93111E 50%, #821617 51%, #840D0F 100%);
+      background: -moz-linear-gradient(top, #C1122F 1%, #93111E 50%, #821617 51%, #840D0F 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#C1122F), color-stop(50%,#93111E), color-stop(51%,#821617), color-stop(100%,#840D0F));
     }
-    #contactForm .formfield input {
-        color: #fff;
-        padding: 0.19em 0.13em;
-        border: none;
-        -moz-border-radius: 3px;
-        -webkit-border-radius: 3px;
-        background: #C1122F;
-        background: -moz-linear-gradient(top, #C1122F 1%, #93111E 50%, #821617 51%, #840D0F 100%);
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#C1122F), color-stop(50%,#93111E), color-stop(51%,#821617), color-stop(100%,#840D0F));
-      }
-      #contactForm .formfield input[type=text] { 
-        width: 15.49em;
-        font-size: 1em;
-      }
-      #contactForm .formfield input[type=submit] {
+      form label input[type=text] { font-size: 1em; width: 15.49em; }
+      form input[type=submit] {
         font-size: 1.6em;
         padding: 0.19em 1.25em;
         float: right;
       }
-      #contactForm .formfield input[type=text]:focus,
-      #contactForm .formfield input[type=submit]:hover {
+      form label input[type=text]:focus,
+      form label input[type=text]:disabled,
+      form input[type=submit]:hover {
         background: #888888;
+        background: -o-linear-gradient(top, #888888 0%, #444 50%, #222222 51%, #000000 100%);
         background: -moz-linear-gradient(top, #888888 0%, #444 50%, #222222 51%, #000000 100%);
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#888888), color-stop(50%,#444), color-stop(51%,#222222), color-stop(100%,#000000));
       }
-      

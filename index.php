@@ -1,4 +1,7 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . '_includes/header.php'; ?>
+<?php
+  $body = 'home';
+	include $_SERVER['DOCUMENT_ROOT'] . '/_includes/header.php';
+?>
 <div class="leftcol">
   <h2 class="bigRed hidden">Big Red in Pennsylvania</h2>
   <div id="slideshow">
@@ -15,6 +18,6 @@
   </div>
 </div>
 <?php
-  include $_SERVER['DOCUMENT_ROOT'] . '_includes/rightcol.php';
-  include $_SERVER['DOCUMENT_ROOT'] . '_includes/footer.php';
+  include $_SERVER['DOCUMENT_ROOT'] . '/_includes/rightcol.php';
+  include $_SERVER['DOCUMENT_ROOT'] . '/_includes/footer.php';
 ?>
